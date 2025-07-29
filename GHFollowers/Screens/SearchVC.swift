@@ -73,6 +73,7 @@ class SearchVC: UIViewController {
     
     func configureTextField() {
         view.addSubview(usernameTextField)
+        usernameTextField.translatesAutoresizingMaskIntoConstraints = false
         usernameTextField.delegate = self
         
         NSLayoutConstraint.activate([
@@ -94,6 +95,7 @@ class SearchVC: UIViewController {
     
     func configureCallToActionButton() {
         view.addSubview(callToActionButton)
+        callToActionButton.translatesAutoresizingMaskIntoConstraints = false
         callToActionButton.addTarget(
             self,
             action: #selector(pushFollowersVC),

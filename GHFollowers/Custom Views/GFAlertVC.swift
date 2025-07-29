@@ -1,5 +1,5 @@
 //
-//  GFAlerVC.swift
+//  GFAlertVC.swift
 //  GHFollowers
 //
 //  Created by Usanka Ranasinghe on 27/7/2025.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GFAlerVC: UIViewController {
+class GFAlertVC: UIViewController {
     let containerView = UIView()
     let titleLabel = GFTitleLabel(textAlignment: .center, fontSize: 20)
     let messageLabel = GFBodyLabel(textAlignment: .center)
@@ -59,6 +59,7 @@ class GFAlerVC: UIViewController {
     
     private func configureTitleLabel() {
         containerView.addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.text = alertTitle ?? "Something went wrong"
         
         NSLayoutConstraint.activate([
@@ -80,6 +81,7 @@ class GFAlerVC: UIViewController {
     
     private func configureActionButton() {
         containerView.addSubview(actionButton)
+        actionButton.translatesAutoresizingMaskIntoConstraints = false
         actionButton.setTitle(buttonTitle ?? "OK", for: .normal)
         actionButton.addTarget(
             self,
@@ -106,6 +108,7 @@ class GFAlerVC: UIViewController {
     
     private func configureMessageLabel() {
         containerView.addSubview(messageLabel)
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
         messageLabel.text = alertMessage ?? "Unable to complete request"
         messageLabel.numberOfLines = 4
         

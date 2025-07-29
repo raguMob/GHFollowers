@@ -14,7 +14,7 @@ extension UIViewController {
         buttonTitle: String
     ) {
         DispatchQueue.main.async {
-            let alertVC = GFAlerVC(
+            let alertVC = GFAlertVC(
                 title: title,
                 message: message,
                 buttonTitle: buttonTitle
